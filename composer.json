@@ -1,0 +1,65 @@
+{
+    "name": "dragon-code/laravel-http-logger",
+    "description": "Logging incoming HTTP requests",
+    "license": "MIT",
+    "type": "library",
+    "keywords": [
+        "laravel",
+        "http",
+        "https",
+        "log",
+        "logger",
+        "logging",
+        "requests",
+        "dragon-code",
+        "dragon",
+        "andrey-helldar"
+    ],
+    "authors": [
+        {
+            "name": "Andrey Helldar",
+            "email": "helldar@ai-rus.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/TheDragonCode/laravel-http-logger/issues",
+        "source": "https://github.com/TheDragonCode/laravel-http-logger"
+    },
+    "require": {
+        "php": "^8.1",
+        "doctrine/dbal": "^3.3",
+        "dragon-code/support": "^5.8",
+        "illuminate/database": "^9.5",
+        "illuminate/routing": "^9.5",
+        "illuminate/http": "^9.5",
+        "illuminate/support": "^9.5"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.5",
+        "orchestra/testbench": "^7.1",
+        "phpunit/phpunit": "^9.5"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "DragonCode\\LaravelHttpLogger\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DragonCode\\LaravelHttpLogger\\ServiceProvider"
+            ]
+        }
+    }
+}
