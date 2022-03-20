@@ -9,9 +9,11 @@ use DragonCode\LaravelHttpLogger\Providers\ServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Routing\Router;
 use Orchestra\Testbench\TestCase as BaseTestCase;
+use Tests\Concerns\HasDatabase;
 
 class TestCase extends BaseTestCase
 {
+    use HasDatabase;
     use RefreshDatabase;
 
     protected string $host = 'https://localhost';

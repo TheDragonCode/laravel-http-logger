@@ -6,4 +6,12 @@ return [
     'connection' => env('DB_CONNECTION'),
 
     'table' => 'http_logs',
+
+    'hide' => [
+        'authorization',
+        'token',
+        'access_token',
+        'password',
+        'password_confirmation',
+    ],
 ];

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DragonCode\LaravelHttpLogger\Models;
 
+use DragonCode\LaravelHttpLogger\Casts\Hide;
+use DragonCode\LaravelHttpLogger\Casts\HideHeader;
 use DragonCode\LaravelHttpLogger\Casts\Method;
 use DragonCode\LaravelHttpLogger\Concerns\HasTable;
 use DragonCode\Support\Facades\Http\Builder;
@@ -32,9 +34,9 @@ class HttpLog extends Model
 
         'port' => 'int',
 
-        'query'   => 'json',
-        'payload' => 'json',
-        'headers' => 'json',
+        'query'   => Hide::class,
+        'payload' => Hide::class,
+        'headers' => HideHeader::class,
     ];
 
     public function __construct(array $attributes = [])
