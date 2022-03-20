@@ -50,7 +50,7 @@ For example:
 This package is licensed under the [MIT License](LICENSE).
 
 
-[badge_build]:          https://img.shields.io/github/workflow/status/TheDragonCode/laravel-http-logger/laravel-9?style=flat-square
+[badge_build]:          https://img.shields.io/github/workflow/status/TheDragonCode/laravel-http-logger/Laravel%209?style=flat-square
 
 [badge_downloads]:      https://img.shields.io/packagist/dt/dragon-code/laravel-http-logger.svg?style=flat-square
 
