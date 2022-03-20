@@ -37,6 +37,14 @@ If you need to change the database connection or table name, you can do it in th
 
 Since Laravel contains a logging file by default, it will not be published, so manually copy the [settings](config/logging.php) block into your project's `config/logging.php` file.
 
+### Database table
+
+All incoming HTTP requests will be logged to a database table. The default name is `http_logs`.
+
+For example:
+
+![database table](.github/images/database.png)
+
 ## License
 
 This package is licensed under the [MIT License](LICENSE).
