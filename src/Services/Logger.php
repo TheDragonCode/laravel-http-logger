@@ -15,7 +15,7 @@ class Logger
             $request->route()?->getName(),
             $request->getRealMethod(),
             $request->getScheme(),
-            $request->getHttpHost(),
+            $request->getHost(),
             $request->getPort(),
             $request->path(),
             $request->query(),
