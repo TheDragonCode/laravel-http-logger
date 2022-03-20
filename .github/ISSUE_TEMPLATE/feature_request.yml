@@ -1,0 +1,44 @@
+name: Feature Proposal
+description: Propose a new feature
+
+labels:
+    - '💪 feature request'
+
+body:
+    -   type: markdown
+        attributes:
+            value: |
+                Thanks for taking the time to fill out this bug report!
+
+                ⚠️Review existing issues to see whether someone else has already reported your issue.
+
+    -   type: textarea
+        id: description
+        attributes:
+            label: Feature description
+            description: |
+                Think through your proposal and describe it clearly.
+
+                Note that features are only added to the most recent version of Laravel HTTP Logger.
+        validations:
+            required: true
+
+    -   type: textarea
+        id: environment
+        attributes:
+            label: Environment
+            description: |
+                Tip: Use the `composer info dragon-code/laravel-http-logger` command to get information about package.
+                Tip: Use the `php artisan --version` command to get information for Laravel Framework.
+                Tip: Use the `php -v` command to get information for PHP.
+            value: |
+                - HTTP Logger Version:
+                - Laravel Version:
+                - PHP Version:
+        validations:
+            required: false
+
+    -   type: markdown
+        attributes:
+            value: |
+                ❤️ The Dragon Code? Please consider supporting our collective: https://github.com/sponsors/TheDragonCode
