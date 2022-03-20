@@ -26,16 +26,16 @@ class Logger
     }
 
     protected static function store(
-        ?string           $name,
-        string            $method,
-        string            $scheme,
-        string            $host,
-        int|string|null   $port,
-        string            $path,
+        ?string $name,
+        string $method,
+        string $scheme,
+        string $host,
+        int|string|null $port,
+        string $path,
         array|string|null $query,
-        array             $payload,
-        array             $headers,
-        ?string           $ip
+        array $payload,
+        array $headers,
+        ?string $ip
     ): void {
         HttpLog::create(compact(
             'name',
