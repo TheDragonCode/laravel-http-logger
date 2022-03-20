@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use DragonCode\LaravelHttpLogger\Models\HttpLog;
 use Illuminate\Support\Str;
 
-class FeatureTest extends TestCase
+class MainTest extends TestCase
 {
     public function testLogging()
     {
@@ -26,28 +25,12 @@ class FeatureTest extends TestCase
             $response->assertNoContent();
 
             $this->assertDatabaseLogsCount(++$count);
-            $this->assertDatabaseHasRecord($method, $name, $uri);
+            $this->assertDatabaseHasRecord(Str::upper($method), $name, $uri);
         }
     }
 
     public function testUnknownRoute()
     {
         $this->get('foo')->assertNotFound();
-    }
-
-    protected function assertDatabaseLogsCount(int $count): void
-    {
-        $this->assertSame($count, HttpLog::query()->count());
-    }
-
-    protected function assertDatabaseHasRecord(string $method, string $name, string $path, int $expected = 1): void
-    {
-        $method = Str::upper($method);
-
-        $count = HttpLog::where(compact('method', 'name', 'path'))->count();
-
-        $message = $method . ' ' . $path . ' ' . $name;
-
-        $this->assertSame($expected, $count, $message);
     }
 }
