@@ -29,6 +29,7 @@ class Hide implements CastsAttributes
         foreach ($values as $k => &$val) {
             if (is_array($val)) {
                 $val = $this->process($val);
+
                 continue;
             }
 

@@ -15,10 +15,10 @@ class HideTest extends TestCase
         $path   = 'api/pages';
 
         $uri = $path . '?' . http_build_query([
-                'foo'          => 'Foo',
-                'token'        => 123,
-                'access_token' => 456,
-            ]);
+            'foo'          => 'Foo',
+            'token'        => 123,
+            'access_token' => 456,
+        ]);
 
         $this->assertDatabaseLogsCount(0);
 
