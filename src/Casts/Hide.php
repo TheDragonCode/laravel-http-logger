@@ -19,9 +19,11 @@ class Hide implements CastsAttributes
 
     public function set($model, string $key, $value, array $attributes): string
     {
-        $value = $this->process((array) $value);
+        if ($this->enabled()) {
+            $value = $this->process((array) $value);
+        }
 
-        return json_encode($value);
+        return json_encode((array) $value, JSON_NUMERIC_CHECK);
     }
 
     protected function process(array $values): array
@@ -54,8 +56,13 @@ class Hide implements CastsAttributes
         return str_pad('', $length, $this->mask);
     }
 
+    protected function enabled(): bool
+    {
+        return (bool) config('http-logger.hide.enabled', true);
+    }
+
     protected function hides(): array
     {
-        return config('http-logger.hide', []);
+        return config('http-logger.hide.keys', []);
     }
 }
