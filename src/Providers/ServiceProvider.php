@@ -27,12 +27,12 @@ class ServiceProvider extends BaseServiceProvider
     protected function publishConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../../config/logging.php' => config_path('logging.php'),
+            __DIR__ . '/../../config/http-logger.php' => config_path('http-logger.php'),
         ], 'config');
     }
 
     protected function registerConfig(): void
     {
-        $this->mergeConfigFrom(__DIR__ . '/../../config/logging.php', 'logging');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/http-logger.php', 'http-logger');
     }
 }

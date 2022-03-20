@@ -33,9 +33,7 @@ Run the migrations and submit a request to the site.
 
 By default, the plugin is ready to go.
 
-If you need to change the database connection or table name, you can do it in the [settings](config/logging.php).
-
-Since Laravel contains a logging file by default, it will not be published, so manually copy the [settings](config/logging.php) block into your project's `config/logging.php` file.
+If you need to change the database connection or table name, you can do it in the [settings](config/http-logger.php).
 
 ### Database table
 

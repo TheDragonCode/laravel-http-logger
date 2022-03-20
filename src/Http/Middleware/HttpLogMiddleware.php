@@ -21,6 +21,6 @@ class HttpLogMiddleware
 
     protected function enabled(): bool
     {
-        return config('logging.http.enabled', true);
+        return config('http-logger.enabled', true);
     }
 }

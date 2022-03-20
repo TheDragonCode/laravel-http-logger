@@ -8,11 +8,11 @@ trait HasTable
 {
     protected function getLogsConnectionName(): ?string
     {
-        return config('logging.http.connection');
+        return config('http-logger.connection');
     }
 
     protected function getLogsTableName(): ?string
     {
-        return config('logging.http.table');
+        return config('http-logger.table');
     }
 }
