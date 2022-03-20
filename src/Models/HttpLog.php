@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace DragonCode\LaravelHttpLogger\Models;
 
+use DragonCode\LaravelHttpLogger\Casts\Method;
 use DragonCode\LaravelHttpLogger\Concerns\HasTable;
-use DragonCode\LaravelHttpLogger\Enums\Method;
 use DragonCode\Support\Facades\Http\Builder;
 use DragonCode\Support\Helpers\Http\Builder as HttpBuilder;
 use Illuminate\Database\Eloquent\Model;

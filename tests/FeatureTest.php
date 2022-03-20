@@ -40,14 +40,14 @@ class FeatureTest extends TestCase
         $this->assertSame($count, HttpLog::query()->count());
     }
 
-    protected function assertDatabaseHasRecord(string $method, string $name, string $path): void
+    protected function assertDatabaseHasRecord(string $method, string $name, string $path, int $expected = 1): void
     {
         $method = Str::upper($method);
 
-        $count = HttpLog::query()
-            ->where(compact('method', 'name', 'path'))
-            ->count();
+        $count = HttpLog::where(compact('method', 'name', 'path'))->count();
 
-        $this->assertSame(1, $count);
+        $message = $method . ' ' . $path . ' ' . $name;
+
+        $this->assertSame($expected, $count, $message);
     }
 }

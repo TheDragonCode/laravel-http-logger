@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace Tests;
 
-use DragonCode\LaravelHttpLogger\ServiceProvider;
+use DragonCode\LaravelHttpLogger\Providers\RouteServiceProvider;
+use DragonCode\LaravelHttpLogger\Providers\ServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Routing\Router;
 use Orchestra\Testbench\TestCase as BaseTestCase;
@@ -26,7 +27,10 @@ class TestCase extends BaseTestCase
 
     protected function getPackageProviders($app): array
     {
-        return [ServiceProvider::class];
+        return [
+            ServiceProvider::class,
+            RouteServiceProvider::class,
+        ];
     }
 
     protected function getEnvironmentSetUp($app)
@@ -39,7 +43,9 @@ class TestCase extends BaseTestCase
         foreach ($this->routes as $item) {
             [$method, $name, $uri] = $item;
 
-            $route->{$method}($uri, fn () => response()->noContent())->name($name);
+            $route->{$method}($uri, fn () => response()->noContent())
+                ->middleware('web')
+                ->name($name);
         }
     }
 
