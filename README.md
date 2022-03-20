@@ -14,7 +14,7 @@
 To get the latest version of `Laravel HTTP Logger`, simply require the project using [Composer](https://getcomposer.org):
 
 ```bash
-$ composer require dragon-code/laravel-http-logger
+composer require dragon-code/laravel-http-logger
 ```
 
 Or manually update `require` block of `composer.json` and run `composer update`.
