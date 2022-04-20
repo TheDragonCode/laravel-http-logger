@@ -28,7 +28,7 @@
     "require": {
         "php": "^8.0",
         "doctrine/dbal": "^3.3",
-        "dragon-code/support": "^5.8",
+        "dragon-code/support": "^5.8 || ^6.0",
         "illuminate/contracts": "^8.37 || ^9.0",
         "illuminate/database": "^8.37 || ^9.0",
         "illuminate/http": "^8.37 || ^9.0",
