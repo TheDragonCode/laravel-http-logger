@@ -9,7 +9,7 @@ use DragonCode\LaravelHttpLogger\Casts\HideHeader;
 use DragonCode\LaravelHttpLogger\Casts\Method;
 use DragonCode\LaravelHttpLogger\Concerns\HasTable;
 use DragonCode\Support\Facades\Http\Builder;
-use DragonCode\Support\Helpers\Http\Builder as HttpBuilder;
+use DragonCode\Support\Http\Builder as HttpBuilder;
 use Illuminate\Database\Eloquent\Model;
 
 class HttpLog extends Model
