@@ -16,6 +16,7 @@ return [
             'access_token',
             'password',
             'password_confirmation',
+            'hash',
         ],
     ],
 ];
