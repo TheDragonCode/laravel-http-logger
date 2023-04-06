@@ -1,4 +1,4 @@
-# Laravel HTTP Logger
+# HTTP Logger for Laravel
 
 ![the dragon code http logger](https://preview.dragon-code.pro/the-dragon-code/http-logger.svg?brand=laravel)
 
@@ -48,7 +48,7 @@ For example:
 This package is licensed under the [MIT License](LICENSE).
 
 
-[badge_build]:          https://img.shields.io/github/actions/workflow/status/TheDragonCode/laravel-http-logger/laravel-9.yml?style=flat-square
+[badge_build]:          https://img.shields.io/github/actions/workflow/status/TheDragonCode/laravel-http-logger/phpunit.yml?style=flat-square
 
 [badge_downloads]:      https://img.shields.io/packagist/dt/dragon-code/laravel-http-logger.svg?style=flat-square
 
