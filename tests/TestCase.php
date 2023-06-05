@@ -14,6 +14,7 @@ use Tests\Concerns\HasDatabase;
 class TestCase extends BaseTestCase
 {
     use HasDatabase;
+
     use RefreshDatabase;
 
     protected string $host = 'https://localhost';
