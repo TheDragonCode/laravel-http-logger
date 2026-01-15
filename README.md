@@ -1,6 +1,9 @@
 # HTTP Logger for Laravel
 
-![the dragon code http logger](https://banners.beyondco.de/HTTP%20Logger.png?theme=light&packageManager=composer+require&packageName=dragon-code%2Flaravel-http-logger&pattern=topography&style=style_2&description=by+The+Dragon+Code&md=1&showWatermark=1&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg)
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://banners.beyondco.de/Laravel%20Http%20Logger.png?theme=dark&pattern=topography&style=style_2&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg&packageManager=composer+require&packageName=dragon-code%2Flaravel-http-logger&description=Logging+incoming+HTTP+requests&md=1&showWatermark=1">
+    <img src="https://banners.beyondco.de/Laravel%20Http%20Logger.png?theme=light&pattern=topography&style=style_2&fontSize=100px&images=https%3A%2F%2Flaravel.com%2Fimg%2Flogomark.min.svg&packageManager=composer+require&packageName=dragon-code%2Flaravel-http-logger&description=Logging+incoming+HTTP+requests&md=1&showWatermark=1" alt="Laravel Http Logger">
+</picture>
 
 [![Stable Version][badge_stable]][link_packagist]
 [![Total Downloads][badge_downloads]][link_packagist]
